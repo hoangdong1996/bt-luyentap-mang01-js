@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra mảng có bao nhiêu số nguyên lớn hơn hoặc bằng 10</title>
+</head>
+<body>
+<script>
+    let array = [1,5,7,9,10,11,15,66,88,54];
+    let array2 = [];
+    count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] >= 10) {
+            array2.push(array[i]);
+            count++;
+        }
+    }
+    alert("Có " + count + " phần tử lớn hơn 10 trong mảng là " + array2.join(" "));
+</script>
+</body>
+</html>

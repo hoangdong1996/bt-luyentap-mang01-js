@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình khởi tạo mảng số nguyên.Tìm max và tính trung bình</title>
+</head>
+<body>
+<script>
+    let length = parseInt(prompt("Nhập số lương phần tử"));
+    let array = [];
+    let count = 0;
+    while (count < length) {
+        let number = parseInt(prompt("Nhập phần tử thứ " + count));
+        array.push(number);
+        count++;
+    }
+    alert("Mảnh vừa nhập là " + array.join(" "));
+
+    let maxArray = array[0];
+    for (let i = 0; i < length; i++) {
+        if (array[i] > maxArray) {
+            maxArray = array[i];
+        }
+    }
+
+    let sumArray = 0;
+    for (let i = 0; i < length; i++) {
+        sumArray = sumArray + array[i];
+    }
+    alert("Giá trị lớn nhất trong mảng " + maxArray + " và giá trị trung bình " + sumArray / length);
+</script>
+</body>
+</html>

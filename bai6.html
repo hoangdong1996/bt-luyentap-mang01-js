@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên V trong mảng</title>
+</head>
+<body>
+<script>
+    let length = parseInt(prompt("Nhập số lượng phần tủ trong mảng"));
+    let count = 0;
+    let array = [];
+    while (count < length) {
+        let number = parseInt(prompt("Nhập phần tử thứ " + count));
+        array.push(number);
+        count++;
+    }
+    alert("Mảng vừa nhập được là " + array.join(" "));
+
+    let numberV = parseInt(prompt("Nhập số nguyên V "));
+    for (let i = 0; i < length; i++) {
+        if (numberV === array[i]) {
+            alert("V is in the array");
+            break;
+        } else {
+            alert("V is not in the array");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo mảng. Tìm V có trong mảng hay không. Nếu có thì xóa V</title>
+</head>
+<body>
+<script>
+    let length = parseInt(prompt("Nhập số lượng phần tủ trong mảng"));
+    let count = 0;
+    let array = [];
+    while (count < length) {
+        let number = parseInt(prompt("Nhập phần tử thứ " + count));
+        array.push(number);
+        count++;
+    }
+    alert("Mảng vừa nhập được là " + array.join(" "));
+
+    let numberV = parseInt(prompt("Nhập số nguyên V muốn xóa"));
+    for (let i = 0; i < length; i++) {
+        if ( array[i] === numberV) {
+            let k = i;
+            for (k; k < length; k++) {
+                array[k] = array[k + 1];
+            }
+        }
+    }
+    alert(array.join(" "));
+
+</script>
+</body>
+</html>

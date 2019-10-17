@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và nhập một mảng số nguyên. Đảo ngược các phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let length = parseInt(prompt("Nhập số lượng phần tử trong mảng"));
+    let count = 0;
+    let array = [];
+    while (count < length) {
+        let number = parseInt(prompt("Nhập phần tử thứ " + count));
+        array.push(number);
+        count++;
+    }
+    alert("Mảng vừa nhập được là " + array.join(" "));
+
+    for (let i = 0; i < length/2; i++) {
+        let temp;
+        temp = array[i];
+        array[i] = array[length - i - 1];
+        array[length - i - 1] = temp;
+    }
+    alert("Mảng sau khi đảo chiều là " + array.join(" "));
+</script>
+</body>
+</html>
